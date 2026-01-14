@@ -25,4 +25,4 @@ All workshop material, theory notes, and guided instructions are available here:
 Minimal installation is required. The workshop is best experienced on **Ubuntu**, but the code is compatible with **Windows and macOS** as well.
 
 ```bash
-pip install mujoco loop_rate_limiters mink
+pip install mujoco numpy loop_rate_limiters mink
