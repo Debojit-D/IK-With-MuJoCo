@@ -6,9 +6,13 @@
 import mujoco
 import numpy as np
 from mujoco.viewer import launch
+from pathlib import Path
 
-# Path to your MuJoCo XML model (MJCF or converted URDF file)
-XML_PATH = "/home/iitgn-robotics/Debojit_WS/manipulability-optimization/robot_description/franka_emika_panda/scene.xml"
+# Path to your MuJoCo XML model (MJCF or converted URDF file),
+# resolved relative to the repository root (parent of this scripts/ folder)
+XML_PATH = str(
+    (Path(__file__).resolve().parent.parent / "description" / "franka_emika_panda" / "scene.xml")
+)
 
 # Load model & data
 model = mujoco.MjModel.from_xml_path(XML_PATH)
